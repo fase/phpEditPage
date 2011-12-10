@@ -11,8 +11,7 @@
   <body>
     <?php $_SESSION["admin"] = true; ?>
     
-    <div align="center">
-    <div style="width: 900px; border: solid 1px red;">
+    <div style="width: 900px;">
     <? if($_SESSION["admin"] != null) { ?>
       <div style="text-align: right;"><input id="btnEdit" type="button" value="Edit" onclick="toggleEdit()" /></div>
     <? } ?>
@@ -34,7 +33,6 @@
        </form>
       <? } ?>
    </div>
-  </div>
   </div>
  </body>
 </html>
