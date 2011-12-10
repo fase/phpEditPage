@@ -2,9 +2,7 @@
   <head>
     <title>PHP xml PoC</title>
       <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-      <script type="text/javascript">
-        google.load("jquery", "1.3");
-      </script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
       <!-- Load jQuery build -->
       <script type="text/javascript" src="tiny_mce/tiny_mce.js"></script>
@@ -12,11 +10,14 @@
   </head>
   <body>
     <?php $_SESSION["admin"] = true; ?>
+    
+    <div align="center">
+    <div style="width: 900px; border: solid 1px red;">
     <? if($_SESSION["admin"] != null) { ?>
       <div style="text-align: right;"><input id="btnEdit" type="button" value="Edit" onclick="toggleEdit()" /></div>
     <? } ?>
-    
-    <div id="divContent">
+
+   <div id="divContent">
     </div>
 
     <div id="divEdit" style="display: none;">
@@ -28,10 +29,12 @@
           
           <input type="hidden" id="filename" name="filename" value="<?=basename($_SERVER["PHP_SELF"]);?>" />
  
-          <input type="submit" value="Manually Submit" />
+          <!-- For php debug purposes only
+            <input type="submit" value="Manually Submit" /> -->
        </form>
       <? } ?>
    </div>
-
+  </div>
+  </div>
  </body>
 </html>
